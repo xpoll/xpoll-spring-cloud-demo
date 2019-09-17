@@ -1,0 +1,16 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: xpoll-spring-cloud-config-eureka
+    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # 向注册中心注册自己
+    fetch-registry: false # 检索服务
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+   

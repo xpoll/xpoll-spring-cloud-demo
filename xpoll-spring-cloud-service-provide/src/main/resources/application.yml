@@ -19,3 +19,12 @@ spring:
 management:
   security:
     enabled: false
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/
+    

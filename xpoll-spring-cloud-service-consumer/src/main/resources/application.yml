@@ -1,2 +1,14 @@
 server:
   port: 8011
+
+spring:
+  application:
+    name: xpoll-spring-cloud-service-consumer
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/
