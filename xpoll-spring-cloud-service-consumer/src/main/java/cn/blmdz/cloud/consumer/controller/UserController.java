@@ -17,7 +17,7 @@ public class UserController {
 
 	private @Autowired RestTemplate restTemplate;
 	
-	private static final String URL_PREFIX = "http://xpoll-spring-cloud-service-provide/user";
+	private static final String URL_PREFIX = "http://XPOLL-SPRING-CLOUD-SERVICE-PROVIDE/user";
 	
 	@RequestMapping(value="/create", method= RequestMethod.POST)
 	public int create(User user) {
